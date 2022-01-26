@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication4
+    
+{ /*
+    class PaperPrinter
+    {
+        public void Print(string message)
+        {
+            Console.WriteLine(message);
+        }
+
+    }
+
+    class ScreenPrinter
+    {
+        public void Print(string message)
+        {
+            Console.WriteLine(message);
+        }
+    }
+
+    public delegate void PrintDelegate(string message);
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //////
+            PrintDelegate pdObject;
+            PaperPrinter pp = new PaperPrinter();
+            pdObject = pp.Print;
+            pdObject("hello paper printer");
+            Console.ReadLine();
+            ////////
+
+            PrintDelegate sdObject;
+            ScreenPrinter sc = new ScreenPrinter();
+            sdObject = sc.Print;
+            sdObject("hello screen printer");
+            Console.ReadLine();
+        }
+    }
+
+*/
+}

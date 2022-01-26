@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication4
+{
+    class Lambdaex
+    {
+        static void Main(String[] args)
+        {
+            List<int> list = new List<int> { 1, 2, 3, 4, 5 };
+            var resultExpressionLambda = list.FindAll(p => p < 3);
+            Console.WriteLine("Using Expressions lambda:");
+            foreach(var item in resultExpressionLambda)
+            {
+                Console.WriteLine(item);
+            }
+
+            var resultStatementLambda = list.FindAll ( p =>
+                {
+                    //statement
+                    return p <3;
+                });
+            Console.WriteLine("Using Statements lambda:");
+            foreach(var item in resultStatementLambda)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}

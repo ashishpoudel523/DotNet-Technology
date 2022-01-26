@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace LINQ
+{
+    public class Employee
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int salary { get; set; }
+        public string Department { get; set; }
+        public static List<Employee> GetAllEmployees()
+        {
+            List<Employee> listEmpolyees = new List<Employee>(){
+        new Employee {ID=101,Name="jk",salary=20,Department="sales"},
+         new Employee {ID=101,Name="jk",salary=30,Department="sales"},
+         new Employee {ID=101,Name="jk",salary=400,Department="sales"},
+         new Employee {ID=101,Name="jk",salary=240,Department="sales"},
+    };
+
+            return listEmpolyees;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var mshighestSalary = Employee.GetAllEmployees().Where(emp => emp.Department == "sales")
+                .Max(emp => emp.salary);
+            Console.WriteLine("sales depatrment highest salary =" + mshighestSalary);
+
+            Console.ReadKey();
+        }
+    }
+}
+
